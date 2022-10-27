@@ -1,0 +1,87 @@
+$color: red;
+
+body {
+    text-align: center;
+
+    header {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+
+        .box {
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 5px 5px 20px rgb(194, 194, 194);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .area {
+                width: 360px;
+                height: 360px;
+                border: 5px dashed #eee;
+                position: relative;
+
+                #snake {
+
+                    // left: 340px;
+                    >span {
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #000;
+                        border: 1px solid #fff;
+                        position: absolute;
+                    }
+                }
+
+                #food {
+                    width: 10px;
+                    height: 10px;
+                    background: url(../asset/img/cake.png);
+                    background-size: 100% 100%;
+                    position: absolute;
+                    top: 80px;
+                    left: 80px;
+                }
+            }
+
+            .panel {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding-top: 20px;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: arial;
+                    font-size: 24px;
+                    font-weight: bold;
+                    font-style: normal;
+                }
+
+                .bottom {
+                    margin-top: 20px;
+
+                    >button {
+                        border: none;
+                        width: 50%;
+                        border-radius: 5px;
+                        background-color: #febf01;
+                        color: #fff;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
