@@ -6,7 +6,7 @@ class Snake {
     maxPos = 340
     constructor() {
         this.snake = document.querySelector('#snake') as HTMLElement;
-        this.head = this.snake.querySelector('span') as HTMLElement;
+        this.head = document.getElementById('head') as HTMLElement;
         this.bodies = this.snake.getElementsByTagName('span');
     }
     //获取蛇头当前X，Y坐标
@@ -79,6 +79,20 @@ class Snake {
                 throw new Error('你已撞到自身~~')
             }
         }
+    }
+    remove() {
+        this.X = 0
+        this.Y = 0
+        // console.log(this.bodies)
+        let oldLength = this.bodies.length
+        for (let i = oldLength - 1; i > 0; i--) {
+            this.bodies[i].remove();
+        }
+        console.log(this.bodies)
+        
+        // console.log(this.head)
+        // let span: HTMLElement = document.createElement("span");
+        // this.snake.appendChild(span)
     }
 }
 export default Snake;

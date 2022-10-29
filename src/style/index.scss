@@ -25,6 +25,7 @@ body {
                 height: 360px;
                 border: 5px dashed #eee;
                 position: relative;
+                display: block;
 
                 #snake {
 
@@ -45,12 +46,11 @@ body {
                     background: url(../asset/img/cake.png);
                     background-size: 100% 100%;
                     position: absolute;
-                    top: 80px;
-                    left: 80px;
                 }
             }
 
             .panel {
+                // display: none;
                 display: flex;
                 flex-direction: column;
                 width: 100%;
@@ -75,11 +75,127 @@ body {
                         background-color: #febf01;
                         color: #fff;
                         padding: 10px;
+                        margin: auto;
                         margin-bottom: 20px;
+
+                        &#pause {
+                            display: none;
+                        }
+
+
                         &:last-child {
                             margin-bottom: 0;
                         }
                     }
+                }
+
+            }
+
+            .levelPanelBox {
+                width: 360px;
+                display: none;
+
+                #levelPanel {
+                    display: flex;
+                    flex-wrap: wrap;
+                    cursor: pointer;
+
+                    span {
+                        display: flex;
+                        width: 20%;
+                        height: 50px;
+                        // padding: 5px;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                        font-weight: 500;
+
+                        &.active {
+                            background-color: #febf01;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    margin-top: 20px;
+                    justify-content: space-between;
+
+                    .btn {
+                        border: none;
+                        width: 30%;
+                        border-radius: 5px;
+                        padding: 10px;
+                    }
+
+                    #confirm {
+                        background-color: #febf01;
+                        color: #fff;
+                    }
+
+                    #back {
+                        color: #eee;
+                        background-color: rgb(84, 84, 84);
+                    }
+                }
+            }
+        }
+    }
+
+    .mask {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+
+            .icon {
+                display: block;
+                width: 60px;
+                height: 60px;
+                background: url(../asset/img/failure.png);
+            }
+
+            .tip {
+                color: rgb(176, 175, 175);
+                margin: 15px 0;
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-evenly;
+                width: 300px;
+
+                .btn {
+                    border: none;
+                    width: 100px;
+                    border-radius: 5px;
+                    padding: 10px;
+                    font-size: 14px;
+                }
+
+                #change {
+                    background-color: #febf01;
+                    color: #fff;
+                }
+
+                #backGame {
+                    color: #eee;
+                    background-color: rgb(84, 84, 84);
                 }
             }
         }

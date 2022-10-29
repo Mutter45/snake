@@ -5,6 +5,6 @@
         "strict": true,
         // ts出现错误不编译
         "noEmitOnError": true,
-        // "outDir": "./dist",
+        "outDir": "./dist",
     }
 }

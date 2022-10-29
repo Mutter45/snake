@@ -83,6 +83,11 @@ module.exports = {
                     "sass-loader"
                 ],
               },
+              //处理图片资源
+              {
+                test: /\.(png|jpe?g|gif|webp)$/,
+                type: "asset",
+              },
         ]
     },
     //配置插件

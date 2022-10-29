@@ -14,9 +14,27 @@
     </header>
     <main>
         <div class="box">
+            <div class="levelPanelBox">
+                <div id="levelPanel">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="bottom">
+                    <button id="back" class="btn">返回游戏</button>
+                    <button id="confirm" class="btn">确定</button>
+                </div>
+            </div>
             <div class="area">
                 <div id="snake">
-                    <span></span>
+                    <span id="head"></span>
                 </div>
                 <div id="food">
 
@@ -44,21 +62,19 @@
                         设置难度模式
                     </button>
                 </div>
-                <div id="levelPanel">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>6</span>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span>10</span>
-                </div>
             </div>
         </div>
     </main>
+    <div class="mask">
+        <divc class="content">
+           <span class="icon"></span>
+           <span class="tip">很遗憾，下把您可以更棒！</span>
+            <div class="bottom">
+                <button class="btn" id="backGame">返回游戏</button>
+                <button class="btn" id="change">更改难度</button>
+            </div>
+        </divc>
+    </div>
     <script src="./main.js"></script>
 </body>
 
