@@ -17,13 +17,14 @@ class ScorePanel {
         this.setLevelElement = document.querySelector('#setLevel')!
         this.maxLevel = maxLevel
     }
+   
     //得分记录
     addScore() {
         this.score++
         this.ScoreElement.innerHTML = this.score.toString()
     }
-    setLevel(value:number) {
-        if(value > 0 && value < this.maxLevel) {
+    showLevel(value:number) {
+        if(value <= this.maxLevel) {
             this.level = value
             this.LevelElement.innerHTML = this.level.toString()
         } else {
